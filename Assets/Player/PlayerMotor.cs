@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour
 {
     public float gravity = -9.8f;
-    private bool isGrounded;
     public float jumpHeight = 3.0f;
     public float speed = 5.0f;
 
     private CharacterController controller;
+    private bool isGrounded;
     private Vector3 velocity;
 
     private void Start()
