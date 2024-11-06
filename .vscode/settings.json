@@ -58,7 +58,8 @@
     },
     "dotnet.defaultSolution": "FPS Learning.sln",
     "cSpell.words": [
-        "Behaviour"
+        "Behaviour",
+        "Mathf"
     ],
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "csharpier.csharpier-vscode",
