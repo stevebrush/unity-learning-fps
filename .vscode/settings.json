@@ -56,11 +56,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "FPS Learning.sln",
+    "dotnet.defaultSolution": "unity-learning-fps.sln",
     "cSpell.words": [
         "Behaviour",
         "Mathf"
     ],
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "csharpier.csharpier-vscode",
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
 }
