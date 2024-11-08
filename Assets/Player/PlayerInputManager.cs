@@ -29,7 +29,7 @@ public class PlayerInputManager : MonoBehaviour
         this.onFoot.Disable();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         this.motor.ProcessMove(onFoot.Move.ReadValue<Vector2>());
     }
