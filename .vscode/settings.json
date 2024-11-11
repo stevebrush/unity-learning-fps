@@ -59,7 +59,9 @@
     "dotnet.defaultSolution": "unity-learning-fps.sln",
     "cSpell.words": [
         "Behaviour",
-        "Mathf"
+        "Interactable",
+        "Mathf",
+        "Raycast"
     ],
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "csharpier.csharpier-vscode"

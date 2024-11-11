@@ -4,38 +4,38 @@ public class PlayerInputManager : MonoBehaviour
 {
     private PlayerInput playerInput;
 
-    private PlayerInput.OnFootActions onFoot;
+    public PlayerInput.OnFootActions OnFoot { get; private set; }
     private PlayerLook look;
     private PlayerMotor motor;
 
     private void Awake()
     {
         this.playerInput = new();
-        this.onFoot = this.playerInput.OnFoot;
+        this.OnFoot = this.playerInput.OnFoot;
 
         this.look = GetComponent<PlayerLook>();
         this.motor = GetComponent<PlayerMotor>();
 
-        this.onFoot.Jump.performed += ctx => this.motor.Jump();
+        this.OnFoot.Jump.performed += ctx => this.motor.Jump();
     }
 
     private void OnEnable()
     {
-        this.onFoot.Enable();
+        this.OnFoot.Enable();
     }
 
     private void OnDisable()
     {
-        this.onFoot.Disable();
+        this.OnFoot.Disable();
     }
 
     private void Update()
     {
-        this.motor.ProcessMove(onFoot.Move.ReadValue<Vector2>());
+        this.motor.ProcessMove(OnFoot.Move.ReadValue<Vector2>());
     }
 
     private void LateUpdate()
     {
-        this.look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        this.look.ProcessLook(OnFoot.Look.ReadValue<Vector2>());
     }
 }
